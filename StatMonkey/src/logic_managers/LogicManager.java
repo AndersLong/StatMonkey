@@ -8,21 +8,21 @@ public abstract class LogicManager
 	}
 	
 	public String get_output_string(String input_string) {
-		int[] int_dat = this.get_data(input_string);
-		return this.calculate_string(int_dat);
+		double[] double_dat = this.get_data(input_string);
+		return this.calculate_string(double_dat);
 	}
 	
-	protected abstract String calculate_string(int[] int_dat);
+	protected abstract String calculate_string(double[] int_dat);
 	
-	protected int[] get_data(String data)
+	protected double[] get_data(String data)
 	{
 		String[] str_dat = data.split(" ");
-		int[] int_dat = new int[str_dat.length];
+		double[] double_dat = new double[str_dat.length];
 		for(int i = 0; i < str_dat.length; i++)
 		{
-			int_dat[i] = Integer.parseInt(str_dat[i]);
+			double_dat[i] = Double.parseDouble(str_dat[i]);
 		}
-		return int_dat;
+		return double_dat;
 	}
 
 }
