@@ -17,6 +17,8 @@ public class ActionButton extends Button
 	}
 
 	public void action() {
+		Menu.focus = null;
+		Menu.current_view.reset();
 		Menu.current_view = Views.get_view_with_id(redirect_view);
 		
 		
@@ -29,5 +31,7 @@ public class ActionButton extends Button
 		graphics.drawString(title,x,y+30);
 		
 	}
+	
+	protected void reset() {}
 	
 }

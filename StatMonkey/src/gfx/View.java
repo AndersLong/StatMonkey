@@ -20,4 +20,12 @@ public abstract class View {
 	
 	public abstract void draw(Graphics graphics);
 	
+	protected void reset() 
+	{
+		for(Button button : buttons) 
+		{
+			button.reset();
+		}
+	}
+	
 }

@@ -24,4 +24,5 @@ public abstract class LogicManager
 		}
 		return int_dat;
 	}
+
 }

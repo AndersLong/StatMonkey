@@ -42,5 +42,10 @@ public class TextButton extends Button{
 		graphics.drawString(data,x,y+20);
 		
 	}
+	
+	protected void reset() 
+	{
+		this.data = "";
+	}
 
 }

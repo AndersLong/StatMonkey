@@ -82,6 +82,8 @@ public abstract class Button {
 		}
 		return false;
 	}
+	
+	protected abstract void reset();
 
 
 

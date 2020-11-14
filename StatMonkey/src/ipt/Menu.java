@@ -51,6 +51,19 @@ public class Menu implements MouseListener, KeyListener
 
 	@Override
 	public void keyTyped(KeyEvent e) {
+		try
+		{
+			append_char(e);
+		}
+		catch(NullPointerException npe) 
+		{
+			System.out.println("derp");
+		}
+		
+	}
+	
+	public void append_char(KeyEvent e) 
+	{
 		switch(e.getKeyChar())
 		{
 		case ' ':
@@ -87,7 +100,6 @@ public class Menu implements MouseListener, KeyListener
 			this.focus.data += e.getKeyChar();
 			break;
 		}
-		
 	}
 
 	@Override

@@ -11,7 +11,8 @@ public class HomeView extends View
 {
 	
 	public Button home_to_sample_analysis,
-				  home_to_permutation;
+				  home_to_permutation,
+				  home_to_combination;
 	
 	
 	public HomeView() 
@@ -26,6 +27,9 @@ public class HomeView extends View
 		
 		this.home_to_permutation = new ActionButton(50,150,100,50,"permutation calculator",VIEW_ID.PERMUTATION,this);
 		this.buttons.add(home_to_permutation);
+		
+		this.home_to_combination = new ActionButton(50,200,100,50,"combination calculator",VIEW_ID.COMBINATION,this);
+		this.buttons.add(home_to_combination);
 	}
 
 	public void draw(Graphics graphics) 
