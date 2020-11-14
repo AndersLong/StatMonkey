@@ -21,10 +21,10 @@ public class HomeView extends View
 	
 	public void init_buttons() 
 	{
-		this.home_to_sample_analysis = new ActionButton(50,100,100,50,"sample analysis",VIEW_ID.SAMPLE);
+		this.home_to_sample_analysis = new ActionButton(50,100,100,50,"sample analysis",VIEW_ID.SAMPLE,this);
 		this.buttons.add(home_to_sample_analysis);
 		
-		this.home_to_permutation = new ActionButton(50,150,100,50,"permutation calculator",VIEW_ID.PERMUTATION);
+		this.home_to_permutation = new ActionButton(50,150,100,50,"permutation calculator",VIEW_ID.PERMUTATION,this);
 		this.buttons.add(home_to_permutation);
 	}
 
@@ -36,5 +36,6 @@ public class HomeView extends View
 		}
 		
 	}
+
 
 }

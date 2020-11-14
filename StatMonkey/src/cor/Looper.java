@@ -78,7 +78,6 @@ public class Looper implements Runnable{
 		{
 			draw();
 			this.pause();
-			System.out.println(Menu.current_view);
 		}
 		System.exit(0);
 

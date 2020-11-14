@@ -10,6 +10,7 @@ public abstract class Button {
 
 	protected int x,y,w,h;
 	protected String title;
+	protected View view;
 
 	/**
 	 * @param x
@@ -19,7 +20,7 @@ public abstract class Button {
 	 * @param title
 	 */
 
-	public Button(int x, int y, int w, int h, String title) 
+	public Button(int x, int y, int w, int h, String title,View view) 
 	{
 		super();
 		this.x = x;
@@ -27,6 +28,7 @@ public abstract class Button {
 		this.w = w;
 		this.h = h;
 		this.title = title;
+		this.view = view;
 	}
 
 	/**

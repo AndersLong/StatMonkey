@@ -33,7 +33,8 @@ public class Views {
 		views.add(permutation_view);
 	}
 	
-	public void init_views_buttons() {
+	public void init_views_buttons() 
+	{
 		for(View view : views)
 		{
 			view.init_buttons();

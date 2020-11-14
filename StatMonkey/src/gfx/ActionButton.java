@@ -11,8 +11,8 @@ public class ActionButton extends Button
 {
 	private VIEW_ID redirect_view;
 	
-	public ActionButton(int x, int y, int w, int h, String title, VIEW_ID redirect_view) {
-		super(x, y, w, h, title);
+	public ActionButton(int x, int y, int w, int h, String title, VIEW_ID redirect_view,View view) {
+		super(x, y, w, h, title,view);
 		this.redirect_view = redirect_view;
 	}
 

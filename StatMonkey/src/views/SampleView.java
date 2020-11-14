@@ -20,7 +20,7 @@ public class SampleView extends View
 	@Override
 	public void init_buttons() 
 	{
-		this.sample_analysis_to_home = new ActionButton(300,400,100,50,"back",VIEW_ID.HOME);
+		this.sample_analysis_to_home = new ActionButton(300,400,100,50,"back",VIEW_ID.HOME,this);
 		this.buttons.add(sample_analysis_to_home);
 		
 	}

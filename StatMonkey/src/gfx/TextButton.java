@@ -4,14 +4,15 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import ipt.Menu;
+import logic_managers.LogicManager;
 
 public class TextButton extends Button{
 	
 	public String data;
 
-	public TextButton(int x, int y, int w, int h, String title) 
+	public TextButton(int x, int y, int w, int h, String title, View view) 
 	{
-		super(x, y, w, h, title);
+		super(x, y, w, h, title, view);
 		data = "";
 	}
 
@@ -24,7 +25,10 @@ public class TextButton extends Button{
 		}
 		else 
 		{
-			Menu.focus = null;
+			System.out.println(this.view);
+			System.out.println(this.view.logic_manager);
+			System.out.println(this.view.logic_manager.get_output_string(data));
+			this.data = this.view.logic_manager.get_output_string(data);
 		}
 		
 	}
@@ -34,7 +38,8 @@ public class TextButton extends Button{
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(x,y,w,h);
 		graphics.setColor(Color.GREEN);
-		graphics.drawString(data,x,y);
+		graphics.drawString(title,x,y);
+		graphics.drawString(data,x,y+20);
 		
 	}
 
