@@ -1,6 +1,6 @@
 package logic_managers;
 
-import java.util.HashMap;
+import math.MathEngine;
 
 public class CombinationCalc extends LogicManager{
 	
@@ -15,21 +15,9 @@ public class CombinationCalc extends LogicManager{
 		{
 			int n = (int)double_dat[0];
 			int r = (int)double_dat[1];
-			return "" + (factorial(n)/(factorial(r)*factorial(n-r)));
+			return "" + MathEngine.combination(n,r);
 		}
 	}
 	
-	private int factorial(int n) {
-		if(n == 0 || n == 1) 
-		{
-			return 1;
-		}
-		int fact = 1;
-		for(int i = 2; i <= n; i++)
-		{
-			fact *= i;
-		}
-		return fact;
-	}
 
 }

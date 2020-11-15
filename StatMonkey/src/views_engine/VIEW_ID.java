@@ -6,6 +6,7 @@ public enum VIEW_ID {
 	SAMPLE,
 	PERMUTATION,
 	COMBINATION,
+	BINARY_PMF,
 	ETC
 
 }

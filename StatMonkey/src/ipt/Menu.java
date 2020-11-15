@@ -99,6 +99,9 @@ public class Menu implements MouseListener, KeyListener
 		case '9':
 			this.focus.data += e.getKeyChar();
 			break;
+		case '.':
+			this.focus.data += e.getKeyChar();
+			break;
 		}
 	}
 
