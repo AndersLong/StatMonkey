@@ -10,6 +10,11 @@ public class ClearButton extends Button
 	{
 		super(x, y, w, h, title, view);
 	}
+	
+	public ClearButton(int x, int y, String title, View view) 
+	{
+		super(x, y, title, view);
+	}
 
 	public void action() 
 	{

@@ -2,6 +2,7 @@ package views;
 
 import java.awt.Graphics;
 
+import cor.Looper;
 import gfx.ActionButton;
 import gfx.Button;
 import gfx.ClearButton;
@@ -26,24 +27,15 @@ public class CombinationView extends View
 	@Override
 	public void init_buttons() 
 	{
-		this.combination_to_home = new ActionButton(300,400,100,50,"back",VIEW_ID.HOME,this);
+		this.combination_to_home = new ActionButton((Looper.WIDTH - Button.standard_width)/2,150,"back",VIEW_ID.HOME,this);
 		this.buttons.add(combination_to_home);
 		
-		this.calculate_combination = new TextButton(100,100,100,50,"calculate_combination",this);
+		this.calculate_combination = new TextButton((Looper.WIDTH - Button.standard_width)/2,50,"calculate_combination",this);
 		this.buttons.add(calculate_combination);
 		
-		this.clear_button = new ClearButton(50,300,100,50,"clear",this);
+		this.clear_button = new ClearButton((Looper.WIDTH - Button.standard_width)/2,100,"clear",this);
 		this.buttons.add(clear_button);
 		
 	}
 
-	public void draw(Graphics graphics)
-	{
-		for(Button button : buttons)
-		{
-			button.draw(graphics);
-		}
-		
-	}
-	
 }

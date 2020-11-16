@@ -15,6 +15,12 @@ public class TextButton extends Button{
 		super(x, y, w, h, title, view);
 		data = "";
 	}
+	
+	public TextButton(int x, int y, String title, View view) 
+	{
+		super(x, y, title, view);
+		data = "";
+	}
 
 	
 	public void action() {
@@ -25,10 +31,8 @@ public class TextButton extends Button{
 		}
 		else 
 		{
-			System.out.println(this.view);
-			System.out.println(this.view.logic_manager);
-			System.out.println(this.view.logic_manager.get_output_string(data));
-			this.data = this.view.logic_manager.get_output_string(data);
+			this.view.lower_string = view.logic_manager.get_output_string(data);
+			this.data = "";
 		}
 		
 	}

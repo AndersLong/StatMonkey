@@ -11,6 +11,7 @@ public abstract class Button {
 	protected int x,y,w,h;
 	protected String title;
 	protected View view;
+	public static int standard_width = 180,standard_height = 48;
 
 	/**
 	 * @param x
@@ -29,6 +30,10 @@ public abstract class Button {
 		this.h = h;
 		this.title = title;
 		this.view = view;
+	}
+	
+	public Button(int x, int y, String title, View view) {
+		this(x,y,standard_width,standard_height,title,view);
 	}
 
 	/**

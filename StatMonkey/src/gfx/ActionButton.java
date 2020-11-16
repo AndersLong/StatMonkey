@@ -15,6 +15,11 @@ public class ActionButton extends Button
 		super(x, y, w, h, title,view);
 		this.redirect_view = redirect_view;
 	}
+	
+	public ActionButton(int x, int y,String title, VIEW_ID redirect_view,View view) {
+		super(x, y, title,view);
+		this.redirect_view = redirect_view;
+	}
 
 	public void action() {
 		Menu.focus = null;

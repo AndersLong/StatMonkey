@@ -3,6 +3,8 @@ package views_engine;
 import java.util.ArrayList;
 
 import gfx.View;
+import views.BinaryAnalysisView;
+import views.BinaryCDFView;
 import views.BinaryPMFView;
 import views.CombinationView;
 import views.HomeView;
@@ -16,7 +18,9 @@ public class Views {
 		 sample_view,
 		 permutation_view,
 		 combination_view,
-		 binary_pmf_view;
+		 binary_pmf_view,
+		 binary_cdf_view,
+		 binary_analysis_view;
 	
 	
 	public Views() 
@@ -33,12 +37,16 @@ public class Views {
 		permutation_view = new PermutationView();
 		combination_view = new CombinationView();
 		binary_pmf_view = new BinaryPMFView();
+		binary_cdf_view = new BinaryCDFView();
+		binary_analysis_view = new BinaryAnalysisView();
 		
 		views.add(home_view);
 		views.add(sample_view);
 		views.add(permutation_view);
 		views.add(combination_view);
 		views.add(binary_pmf_view);
+		views.add(binary_cdf_view);
+		views.add(binary_analysis_view);
 	}
 	
 	public void init_views_buttons() 
