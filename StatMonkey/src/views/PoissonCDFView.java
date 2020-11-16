@@ -20,6 +20,7 @@ public class PoissonCDFView  extends View
 	{
 		this.view_id = VIEW_ID.POISSON_CDF;
 		this.logic_manager = new PoissonCDFManager();	
+		this.upper_string = "usage: |A|t|x|threshold| note for threshold {1: above x | 2: below x | 3: at most | 4: at least }";
 	}
 
 

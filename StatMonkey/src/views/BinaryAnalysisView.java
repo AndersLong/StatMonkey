@@ -21,6 +21,7 @@ public class BinaryAnalysisView extends View{
 	{
 		this.view_id = VIEW_ID.BINARY_ANALYSIS;
 		this.logic_manager = new BinaryAnalysisManager();	
+		this.upper_string = "usage: |n|p|";
 	}
 
 	

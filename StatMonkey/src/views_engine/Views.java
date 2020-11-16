@@ -12,6 +12,7 @@ import views.PermutationView;
 import views.PoissonCDFView;
 import views.PoissonPDFprobView;
 import views.SampleView;
+import views.UniformAnalysisView;
 
 public class Views {
 	
@@ -24,7 +25,8 @@ public class Views {
 		 binary_cdf_view,
 		 binary_analysis_view,
 		 poisson_pdf_view,
-		 poisson_cdf_view;
+		 poisson_cdf_view,
+		 uniform_analysis_view;
 	
 	
 	public Views() 
@@ -45,6 +47,7 @@ public class Views {
 		binary_analysis_view = new BinaryAnalysisView();
 		poisson_pdf_view = new PoissonPDFprobView();
 		poisson_cdf_view = new PoissonCDFView();
+		uniform_analysis_view = new UniformAnalysisView();
 		
 		views.add(home_view);
 		views.add(sample_view);
@@ -55,6 +58,7 @@ public class Views {
 		views.add(binary_analysis_view);
 		views.add(poisson_pdf_view);
 		views.add(poisson_cdf_view);
+		views.add(uniform_analysis_view);
 	}
 	
 	public void init_views_buttons() 

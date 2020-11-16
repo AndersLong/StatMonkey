@@ -19,6 +19,7 @@ public class BinaryPMFView extends View{
 	{
 		this.view_id = VIEW_ID.BINARY_PMF;
 		this.logic_manager = new BinaryPermutationCalc();	
+		this.upper_string = "usage: |n|x|p|";
 	}
 
 	

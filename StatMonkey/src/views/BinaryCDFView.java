@@ -21,6 +21,7 @@ public class BinaryCDFView extends View{
 	{
 		this.view_id = VIEW_ID.BINARY_CDF;
 		this.logic_manager = new BinaryIntervalProbCalc();	
+		this.upper_string = "usage: |n|a|b|p|";
 	}
 
 	

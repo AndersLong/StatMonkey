@@ -20,7 +20,8 @@ public class PoissonPDFprobView extends View
 	public PoissonPDFprobView() 
 	{
 		this.view_id = VIEW_ID.POISSON_PDF;
-		this.logic_manager = new PoissonpPDFManager();		
+		this.logic_manager = new PoissonpPDFManager();	
+		this.upper_string = "usage: |A|t|x|";
 	}
 
 	@Override

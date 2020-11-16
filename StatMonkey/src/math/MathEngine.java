@@ -151,12 +151,39 @@ public class MathEngine {
 		
 	}
 	
-	public static double poisson_cdf(double A, double t, double threshold) {
+	public static double poisson_cdf(double A, double t, double threshold) 
+	{
 		double sum = 0.0;
 		for(int i = 0; i <= threshold; i++) {
 			sum += poisson_pdf_prob(A,t,i);
 		}
 		return sum;
+	}
+	
+	public static double uniform_mean(double A, double B) 
+	{
+		return (A + B)/2.0;
+	}
+	
+	public static double uniform_variance(double A, double B) 
+	{
+		return Math.pow((A + B),2)/12.0;
+	}
+	
+	public static String uniform_paramter(double A, double B)
+	{
+		return String.format("X~U(%.2f,%.2f)",A,B);
+	}
+	
+	public static double uniform_pdf(double A, double B) 
+	{
+		return (1.0/(B-A));
+	}
+	
+	public static double uniform_cdf(double A, double B, double left, double right) 
+	{
+		double pdf = uniform_pdf(A,B);
+		return pdf*right-pdf*left;
 	}
 
 }

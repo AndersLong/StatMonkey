@@ -34,7 +34,7 @@ public class ActionButton extends Button
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(x,y,w,h);
 		graphics.setColor(Color.BLACK);
-		graphics.drawString(title,(Looper.WIDTH - graphics.getFontMetrics().stringWidth(title))/2,y+30);
+		graphics.drawString(title,x+(w-graphics.getFontMetrics().stringWidth(title))/2,y+30);
 		
 	}
 	

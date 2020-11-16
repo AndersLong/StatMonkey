@@ -22,6 +22,7 @@ public class PermutationView extends View
 	{
 		this.view_id = VIEW_ID.PERMUTATION;
 		this.logic_manager = new PermutationCalc();		
+		this.upper_string = "usage: |n|r|";
 	}
 	
 	@Override

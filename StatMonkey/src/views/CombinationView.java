@@ -22,6 +22,7 @@ public class CombinationView extends View
 	{
 		this.view_id = VIEW_ID.COMBINATION;
 		this.logic_manager = new CombinationCalc();		
+		this.upper_string = "usage: |n|r|";
 	}
 	
 	@Override
