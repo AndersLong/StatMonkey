@@ -11,7 +11,7 @@ public class SampleDataCalc extends LogicManager{
 		double var = MathEngine.get_variation(double_dat, mu);
 		double sigma = Math.sqrt(var);
 		double med = MathEngine.get_median(double_dat);
-		return String.format("| n: %d | med: %f | mu: %f | var: %f | sigma: %f |",n,med,mu,var,sigma);
+		return String.format("| n: %d | med: %.4f | mu: %.4f | var: %.4f | sigma: %.4f |",n,med,mu,var,sigma);
 		
 	}
 	

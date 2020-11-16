@@ -91,7 +91,7 @@ public class Looper implements Runnable{
 		}
 		BufferStrategy buffer_strategy = canvas.getBufferStrategy();
 		Graphics graphics = buffer_strategy.getDrawGraphics();
-		graphics.setColor(null);
+		graphics.setColor(Color.BLACK);
 		graphics.fillRect(0,0,WIDTH,HEIGHT);
 		try {
 			Menu.current_view.draw(graphics);

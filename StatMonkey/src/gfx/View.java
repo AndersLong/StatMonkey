@@ -14,10 +14,12 @@ public abstract class View {
 	public ArrayList<Button> buttons;
 	public VIEW_ID view_id;
 	public LogicManager logic_manager;
-	public String lower_string;
-
+	public String upper_string,lower_string;
+	
+	
 	public View() {
 		buttons = new ArrayList<Button>();
+		upper_string = "";
 		lower_string = "";
 	}
 
@@ -33,7 +35,8 @@ public abstract class View {
 			}
 		}
 		graphics.setColor(Color.GREEN);
-		graphics.drawString(lower_string, 40, Looper.HEIGHT - 40);
+		graphics.drawString(upper_string, (Looper.WIDTH - graphics.getFontMetrics().stringWidth(upper_string))/2, 20);
+		graphics.drawString(lower_string, (Looper.WIDTH - graphics.getFontMetrics().stringWidth(lower_string))/2, Looper.HEIGHT - 40);
 	}
 
 	protected void reset() 

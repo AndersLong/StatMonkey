@@ -123,5 +123,40 @@ public class MathEngine {
 	{
 		return Math.sqrt(variance_binary_variable(n,p));
 	}
+	
+	public static double poisson_pdf_prob(double A, double t, double x) 
+	{
+		return ((Math.pow(Math.E,-1*A*t))*(Math.pow(A*t,x)))/(MathEngine.factorial((int)x));
+	}
+	
+	public static double poisson_cdf_prob(double A, double t, double threshold, int region)
+	{
+		switch(region)
+		{
+		//above
+		case 1:
+			return 1.0 - poisson_cdf(A,t,threshold);
+		//below
+		case 2:
+			return poisson_cdf(A,t,threshold-1);
+		//up to
+		case 3:
+			return poisson_cdf(A,t,threshold);
+		//down to
+		case 4:
+			return 1.0 - poisson_cdf(A,t,threshold-1);
+		default:
+			return 0;
+		}
+		
+	}
+	
+	public static double poisson_cdf(double A, double t, double threshold) {
+		double sum = 0.0;
+		for(int i = 0; i <= threshold; i++) {
+			sum += poisson_pdf_prob(A,t,i);
+		}
+		return sum;
+	}
 
 }

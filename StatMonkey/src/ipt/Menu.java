@@ -54,6 +54,8 @@ public class Menu implements MouseListener, KeyListener
 		try
 		{
 			append_char(e);
+			
+			
 		}
 		catch(NullPointerException npe) 
 		{
@@ -101,6 +103,9 @@ public class Menu implements MouseListener, KeyListener
 			break;
 		case '.':
 			this.focus.data += e.getKeyChar();
+			break;
+		case 'd':
+			focus.give_data_to_view();
 			break;
 		}
 	}

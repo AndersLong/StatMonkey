@@ -14,7 +14,7 @@ public class BinaryPermutationCalc extends LogicManager{
 		int x = (int)double_dat[1];
 		double p = double_dat[2];
 		double prob = MathEngine.binary_prob(n, x, p);
-		return String.format("probability of %d successes (with individual probabilities of %f) out of %d tries is %f", x, p ,n, prob);
+		return String.format("probability of %d successes (with individual probabilities of %.4f) out of %d tries is %.4f", x, p ,n, prob);
 	}
 
 }

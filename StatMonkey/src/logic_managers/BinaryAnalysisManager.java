@@ -15,7 +15,7 @@ public class BinaryAnalysisManager extends LogicManager
 		double mu = MathEngine.expected_value_binary_variable(n,p);
 		double var = MathEngine.variance_binary_variable(n,p);
 		double dev = MathEngine.deviation_binary_variable(n,p);
-		return String.format("random var X with n = %d and p = %f has: | expected value: %f | variance: %f | deviation: %f |",n,p,mu,var,dev);
+		return String.format("random var X with n = %d and p = %.4f has: | expected value: %.4f | variance: %.4f | deviation: %.4f |",n,p,mu,var,dev);
 	}
 
 }

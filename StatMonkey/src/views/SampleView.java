@@ -23,6 +23,7 @@ public class SampleView extends View
 	{
 		this.view_id = VIEW_ID.SAMPLE;
 		this.logic_manager = new SampleDataCalc();	
+		this.upper_string = "To enter a sample, click the top button below, and enter a series of space separated numbers and type enter";
 	}
 	
 	@Override

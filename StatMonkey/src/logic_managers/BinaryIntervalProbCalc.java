@@ -15,7 +15,7 @@ public class BinaryIntervalProbCalc extends LogicManager{
 		int b = (int)double_dat[2];
 		double p = double_dat[3];
 		double prob = MathEngine.binary_cdf_prob(n,a,b,p);
-		return String.format("probability of %d to %d successes (with individual probabilities of %f) out of %d tries is %f", a, b, p ,n, prob);
+		return String.format("probability of %d to %d successes (with individual probabilities of %.4f) out of %d tries is %.4f", a, b, p ,n, prob);
 	}
 
 }

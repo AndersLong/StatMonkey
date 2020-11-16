@@ -10,7 +10,7 @@ public abstract class Button {
 
 	protected int x,y,w,h;
 	protected String title;
-	protected View view;
+	public View view;
 	public static int standard_width = 180,standard_height = 48;
 
 	/**

@@ -3,6 +3,7 @@ package gfx;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import cor.Looper;
 import ipt.Menu;
 import logic_managers.LogicManager;
 
@@ -23,27 +24,30 @@ public class TextButton extends Button{
 	}
 
 	
-	public void action() {
+	public void action() 
+	{
 		if(Menu.focus != this) 
 		{
 			Menu.focus = this;
 			
 		}
-		else 
-		{
-			this.view.lower_string = view.logic_manager.get_output_string(data);
-			this.data = "";
-		}
 		
+	}
+	
+	public void give_data_to_view()
+	{
+		this.view.lower_string = view.logic_manager.get_output_string(data);
+		this.data = "";
 	}
 
 
-	public void paint(Graphics graphics) {
+	public void paint(Graphics graphics) 
+	{
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(x,y,w,h);
 		graphics.setColor(Color.GREEN);
-		graphics.drawString(title,x,y);
-		graphics.drawString(data,x,y+20);
+		graphics.drawString(title,(Looper.WIDTH - graphics.getFontMetrics().stringWidth(title))/2,y);
+		graphics.drawString(data,(Looper.WIDTH - graphics.getFontMetrics().stringWidth(data))/2,y+20);
 		
 	}
 	

@@ -3,6 +3,7 @@ package gfx;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import cor.Looper;
 import ipt.Menu;
 import views_engine.VIEW_ID;
 import views_engine.Views;
@@ -33,7 +34,7 @@ public class ActionButton extends Button
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(x,y,w,h);
 		graphics.setColor(Color.BLACK);
-		graphics.drawString(title,x,y+30);
+		graphics.drawString(title,(Looper.WIDTH - graphics.getFontMetrics().stringWidth(title))/2,y+30);
 		
 	}
 	

@@ -3,6 +3,8 @@ package gfx;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import cor.Looper;
+
 public class ClearButton extends Button
 {
 
@@ -26,7 +28,7 @@ public class ClearButton extends Button
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(x,y,w,h);
 		graphics.setColor(Color.BLACK);
-		graphics.drawString(title,x,y+30);
+		graphics.drawString(title,(Looper.WIDTH - graphics.getFontMetrics().stringWidth(title))/2,y+30);
 	}
 
 	protected void reset() {}
